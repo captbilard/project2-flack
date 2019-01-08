@@ -1,0 +1,95 @@
+body{
+    background-image: url("/static/images/background.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#submit:hover{
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submit{
+    padding: 5px 5px;
+    margin: 10px;
+    
+}
+
+#tasks{
+    padding: 5px 5px;
+    margin: 30px 10px 20px 10px;
+    border-radius: 4px;
+
+}
+
+#tasks:hover{
+    border-color: steelblue;
+}
+
+#task{
+    border-radius: 5px;
+    border: 1px solid white;
+    margin: 100px 570px;
+    padding-bottom: 20px;
+    /*background-color: whitesmoke;*/
+}
+
+.main-head{
+    text-align: center;
+    font-family: Georgia;
+    font-size: bold;
+    color: burlywood;
+    padding: 40px 30px;
+}
+
+.welcome{
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 20px;
+}
+
+.create_channel{
+    font-size: 20px;
+    color: white;
+}
+
+#channel_form input[type=text]{
+    font-size: 20px;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid lightgreen;
+    border-radius: 4px;
+}
+
+.channel_list{
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.channel_head{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+textarea{
+    resize: none;
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='main.css' )}}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='welcome.js') }}"></script>
+</head>
+<body>
+    <h1 class="main-head">Welcome to Flack</h1>
+    <div id="welcome-div" class="welcome"></div>
+    <div id="channel-div" class="create_channel">
+        <p>Fill the form below to create a new channel or join an existing channel</p>
+    </div>
+    <form id="channel_form" action="{{url_for('create_channel')}}" method="POST">
+        <input type="text" placeholder="Enter the channel name" autofocus id="create_channel" name="channel_name"><br>
+        <input type="submit" value="Create Channel" id="submit">
+    </form>
+    <div class="channel_list">
+        {% for channel in channels %}
+            <li>
+                <a href="{{url_for('channel', channel_name=channel)}}">
+                    {% filter upper %}
+                        {{channel}}
+                    {% endfilter %}
+                </a>
+            </li>
+        {% endfor %}
+    </div>
+    <div id="testDiv" data-channels = "{{channels|tojson}}">
+
+    </div>
+    
+</body>
+</html>
